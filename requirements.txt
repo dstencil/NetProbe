@@ -1,0 +1,6 @@
+#requirements.txt
+cffi==1.15.1
+cryptography==41.0.3
+pycparser==2.21
+pyx==0.16
+scapy==2.5.0
