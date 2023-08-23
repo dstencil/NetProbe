@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from model.network_explorer import NetworkExplorer
+from model.mac_manager import MacManager
 from model.arp_spoof import ARPspoofing
 from model.packet_sender import send_arp_packet, send_custom_packet
 import platform
@@ -8,27 +8,27 @@ import scapy
 import argparse
 
 def current_mac_command(args):
-    network_explorer = NetworkExplorer()
-    current_mac = network_explorer.get_current_mac(args.interface)
+    mac_manager = MacManager()
+    current_mac = mac_manager.get_current_mac(args.interface)
     if current_mac:
         print(f"Current MAC address for {args.interface}: {current_mac}")
     else:
         print(f"Unable to retrieve MAC address for {args.interface}")
 
 def change_mac_command(args):
-    network_explorer = NetworkExplorer()
+    mac_manager = MacManager()
 
     if platform.system() == "Linux":
-        network_explorer.change_mac_linux(args.interface, args.new_mac)
+        mac_manager.change_mac_linux(args.interface, args.new_mac)
     elif platform.system() == "Windows":
-        network_explorer.change_mac_windows(args.interface, args.new_mac)
+        mac_manager.change_mac_windows(args.interface, args.new_mac)
     else:
         print("Unsupported operating system")
 
 
 def restore_mac_command(args):
-    network_explorer = NetworkExplorer()
-    network_explorer.restore_original_mac(args.interface)
+    mac_manager = MacManager()
+    mac_manager.restore_original_mac(args.interface)
 
 def arp_spoof_command(args):
     arpspoofer = ARPSpoofer()
