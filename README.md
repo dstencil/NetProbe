@@ -8,19 +8,23 @@ MVC command line application for network analysis
 
 # Examples of mac_changer module:
 
+Add repo to system path
+```
+export PATH=$PATH:/path/to/netprobe/directory
+```
 get current mac address:
 ```
-python netprobe.py current_mac -i "Ethernet(windows)" "eth0(mac/linux)"
+netprobe current_mac -i "Ethernet(windows)" "eth0(mac/linux)"
 ```
 
 change mac address:
 
 ```
-python netprobe.py change_mac -i  "Wi-Fi" -m  ff-ff-ff-ff-ff-ff
+netprobe change_mac -i  "Wi-Fi" -m  ff-ff-ff-ff-ff-ff
 ```
 
 restore original mac address:
 
 ```
-python netprobe.py restore_mac -i  "Wi-Fi"
+netprobe restore_mac -i  "Wi-Fi"
 ```
