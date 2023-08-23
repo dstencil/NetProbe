@@ -20,7 +20,7 @@ setup(
     packages=['NetProbe', 'tests', 'model','view','controller'],
     long_description=read('README'),
     classifiers=[
-        "Development Status :: ",
+        "Development Status :: 2 - Pre-Alpha",
         "Topic :: Utilities",
         "License :: OSI Approved :: Apache 2.0 License",
     ],
