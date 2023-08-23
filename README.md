@@ -1,6 +1,10 @@
 # NetProbe
 MVC command line application for network analysis
 
+### Modules:
+mac_changer (testing)
+arp_spoof (untested)
+packet_sender (untested)
 
 # Examples of mac_changer module:
 
