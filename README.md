@@ -2,7 +2,7 @@
 MVC command line application for network analysis
 
 
-example of mac_changer module:
+# Examples of mac_changer module:
 
 get current mac address:
 ```
